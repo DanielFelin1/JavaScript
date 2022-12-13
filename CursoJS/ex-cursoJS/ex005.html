@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+
+        p{
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
-    <h1>Iniciando estudos com DOM</h1>  
+    <h1>Iniciando estudos com DOM</h1> 
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia iste sunt aliquid magni perspiciatis culpa tempora deserunt voluptates recusandae sed!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed nobis voluptate architecto quae quaerat doloribus veritatis consectetur quod soluta!</p>
+
+    <button onclick="clique()">
+        clique aqui
+    </button>
+
+    <script>
+        function clique(){
+        title = document.getElementsByTagName('h1')[0]
+        /*Os elementos nessa tag terão efeito*/
+        corpo = document.body
+        /*Os elementos nessa tag terão efeito*/    
+        s = document.getElementsByTagName('p')[0]
+        /*Os elementos nessa tag terão efeito*/
+        s.style.color = 'blue'
+        corpo.style.background = 'black'
+        title.style.color = 'white'   
+    }
+    </script>
 </body>
 </html>
