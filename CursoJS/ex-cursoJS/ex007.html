@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <h1>Soma de 2 valores</h1>
+    <h1>Somando valores</h1>
 
     <form action="envio.js" autocomplete="off">
         <input type="number" name="numero" id="numero1"> +
@@ -42,7 +42,7 @@
     var nm1 = Number(n1.value)
     var nm2 = Number(n2.value)
     var s = nm1 + nm2
-    resultado.innerHTML = `O resultado da soma entre ${nm1} e ${nm2} é ${s} `
+    resultado.innerHTML = `O resultado da soma entre ${nm1} e ${nm2} é <strong>${s}</strong> `
     }
 </script>
 </html>
