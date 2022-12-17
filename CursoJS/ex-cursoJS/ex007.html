@@ -17,6 +17,7 @@
 
         div{
             padding-top: 20px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
@@ -32,6 +33,16 @@
             Resultado
         </div>
     </form>
+
+    <form action="envio.js" autocomplete="off">
+        <input type="number" name="numero" id="numero1x"> x 
+        <input type="number" name="numero" id="numero2x">
+        <input type="button" value="Multiplique" onclick="multiplique()">
+        <input type="reset" value="Limpar">
+        <div id="resultmult">
+            Resultado
+        </div>
+    </form>
 </body>
 
 <script>
@@ -43,6 +54,18 @@
     var nm2 = Number(n2.value)
     var s = nm1 + nm2
     resultado.innerHTML = `O resultado da soma entre ${nm1} e ${nm2} é <strong>${s}</strong> `
+    }
+</script>
+
+<script>
+    function multiplique(){
+        var x1 = document.getElementById('numero1x')
+        var x2 = document.getElementById('numero2x')
+        var respostax = document.getElementById('resultmult')
+        var nmx1 = Number(x1.value)
+        var nmx2 = Number(x2.value)
+        var sx = nmx1 * nmx2
+        resultmult.innerHTML = `O resultado da multiplicação entre ${nmx1} e ${nmx2} é igual a ${sx}`
     }
 </script>
 </html>
