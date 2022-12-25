@@ -13,7 +13,7 @@
         <input type="number" name="numero2" id="numero2">
         <input type="button" value="Subtrair" onclick="subtrair()">
         <input type="reset" value="Limpar">
-        <p id="resultado">O resultado é:</p>
+        <p id="resultado">O resultado da subtração é:</p>
    </form> 
 
    <form action="doc.js" autocomplete="off">
@@ -21,19 +21,31 @@
         <input type="number" name="n2" id="n2">
         <input type="button" value="Dividir" onclick="dividir()">
         <input type="reset" value="Limpar">
-        <p id="reultdiv">O resultado é:</p>
+        <p id="resultdiv">O resultado da divisão é:</p>
    </form>
 
    <script>
         function subtrair(){
-        var nm1 = document.getElementById('numero1')
-        var nm2 = document.getElementById('numero2')
-        var resposta = document.getElementById('resultado')
-        var s1 = Number(nm1.value)
-        var s2 = Number(nm2.value)
-        var s = s1 - s2
-        resposta.innerHTML = `O resultado da subtração é: <strong>${s}</strong> `
+            var nm1 = document.getElementById('numero1')
+            var nm2 = document.getElementById('numero2')
+            var resposta = document.getElementById('resultado')
+            var s1 = Number(nm1.value)
+            var s2 = Number(nm2.value)
+            var s = s1 - s2
+            resposta.innerHTML = `O resultado da subtração é: <strong>${s}</strong> `
         } 
+   </script>
+
+   <script>
+        function dividir(){
+            var nmdiv1 = document.getElementById('n1')
+            var nmdiv2 = document.getElementById('n2')
+            var r = document.getElementById('resultdiv')
+            numerodiv1 = Number(nmdiv1.value)
+            numerodiv2 = Number(nmdiv2.value)
+            var sdiv = numerodiv1 / numerodiv2
+            r.innerHTML = `O resultado da divisão é: <strong>${sdiv}</strong>`
+        }
    </script>
 </body>
 </html>
