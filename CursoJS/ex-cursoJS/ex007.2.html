@@ -7,8 +7,18 @@
     <title>calculadora</title>
     <style>
         input{
-            width: 10vw;
-            height: 5vh;
+            width: 100px;
+            height: 40px;
+            margin: 3px;
+        }
+
+        input#espaco{
+            margin-left: 10px;
+            width: 109px;
+        }
+
+        input#tamanho{
+            width: 108px;
         }
     </style>
 </head>
@@ -16,17 +26,17 @@
 
    <form action="document.js" autocomplete="off">
         <input type="number" name="numero1" id="numero1"> -
-        <input type="number" name="numero2" id="numero2">
-        <input type="button" value="Subtrair" onclick="subtrair()">
-        <input type="reset" value="Limpar">
+        <input type="number" name="numero2" id="numero2"> <br>
+        <input id="tamanho" type="button" value="Subtrair" onclick="subtrair()"> 
+        <input id="espaco" type="reset" value="Limpar">
         <p id="resultado">O resultado da subtração é:</p>
    </form> 
 
    <form action="doc.js" autocomplete="off">
         <input type="number" name="n1" id="n1"> /
-        <input type="number" name="n2" id="n2">
-        <input type="button" value="Dividir" onclick="dividir()">
-        <input type="reset" value="Limpar">
+        <input type="number" name="n2" id="n2"> <br>
+        <input id = "tamanho" type="button" value="Dividir" onclick="dividir()">
+        <input id="espaco" type="reset" value="Limpar">
         <p id="resultdiv">O resultado da divisão é:</p>
    </form>
 
