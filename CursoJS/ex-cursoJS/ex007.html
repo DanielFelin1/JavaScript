@@ -26,10 +26,14 @@
     <h1>Calculadora</h1>
 
     <form action="envio.js" autocomplete="off">
+        <!-- ^ Preenchimento automatico destivado-->
         <input type="number" name="numero" id="numero1"> +
         <input type="number" name="numero" id="numero2">
+        <!-- ^ Caixa para inserir os valores, os valores enviados estão dentro do 'id'-->
         <input type="button" value="Somar" onclick="somar()">
+        <!--  ^ Botão para o envio dos elementos para o script-->
         <input type="reset" value="Limpar">
+        <!--Botão de reset-->
         <div id="resultado">
             Resultado
         </div>
@@ -48,25 +52,37 @@
 
 <script>
     function somar(){
+    // ^ Chama a função (onclick) de soma
     var n1 = document.getElementById('numero1')
     var n2 = document.getElementById('numero2')
+    // ^ Vai pegar os elementos dentro das caixas com esse id, em forma de string
     var resposta = document.getElementById('resultado')
+    // ^ O resultado vai nessa variavel, na div com id 'resultado'
     var nm1 = Number(n1.value)
     var nm2 = Number(n2.value)
+    // ^ Vai transformar os elemntos (string) nas variaveis n1 e n2 em números.
     var s = nm1 + nm2
+    // ^ O resultado em numero vai estar na variavel 's'
     resultado.innerHTML = `O resultado da soma entre ${nm1} e ${nm2} é <strong>${s}</strong>`
+    // ^ A resposta estará aqui, dentro do documento HTML.
     }
 </script>
 
 <script>
     function multiplique(){
+        // ^ Chama a função (onclick) multiplique
         var x1 = document.getElementById('numero1x')
         var x2 = document.getElementById('numero2x')
+        // ^ Vai pegar os elementos dentro das caixas com esse id, em forma de string
         var respostax = document.getElementById('resultmult')
+        // ^ O resultado vai nessa variavel, na div com id 'resultmult'
         var nmx1 = Number(x1.value)
         var nmx2 = Number(x2.value)
+        // ^ Vai transformar os elemntos (string) nas variaveis x1 e x2 em números.
         var sx = nmx1 * nmx2
+        // ^ O resultado em numero vai estar na variavel 'sx'
         resultmult.innerHTML = `O resultado da multiplicação entre ${nmx1} e ${nmx2} é igual a <strong>${sx}</strong>`
+        // ^ A resposta estará aqui, dentro do documento HTML.
     }
 </script>
 </html>
