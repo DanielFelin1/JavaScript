@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 80px;
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas vindas ao usuário</h1>
+
+    <input type="button" value="Clique aqui" onclick="clique()">
+
+    <p id="resposta">
+        O resultado vai aparecer aqui...
+    </p>
+
+    <script>
+        function clique(){
+            var nome = window.prompt('Qual o seu nome?')
+            var idade = window.prompt('Qual a sua idade?')
+            var profissao = window.prompt('Qual sua profissão?') 
+            var time = window.prompt('Qual o time pra qual você torce?')
+            var r = document.getElementById('resposta')
+            r.innerHTML = `Olá <strong>${nome}</strong>! Seja bem-vindo! Soube que você tem <strong>${idade}</strong> anos e trabalha como <strong>${profissao}</strong>. Além disso o seu time do coração é o <strong>${time}</strong>.`
+        }
+    </script>
+</body>
+</html>
