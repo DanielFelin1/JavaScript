@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#res{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <form action="archive.js" method="post">
+        <label for="ivelocidade">Velocidade em Km</label>
+        <input type="number" name="" id="ivelocidade">
+        <input type="button" value="enviar" onclick="checar()">
+    </form>
+    <br>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function checar(){
+            var vel = document.getElementById('ivelocidade')
+            var s = Number(vel.value)
+
+            if(s > 100){
+                res.innerHTML = `VOCÊ FOI MULTADO. Seu carro está a uma velocidade de ${s}Km/h`       
+            } else{
+                res.innerHTML = `Você está dentro dos limites de velocidade, siga em segurança.`
+            }
+        }
+    </script>
+</body>
+</html>
