@@ -10,16 +10,37 @@
             height: 80px;
             width: 180px;
         }
+
+        div{
+            max-width: 550px;
+            height: 550px;
+            margin: auto;
+            background-color: lightgray;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div > input{
+            display: block;
+            margin: auto;
+        }
+
+        div > p{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <h1>Boas vindas ao usuário</h1>
 
-    <input type="button" value="Clique aqui" onclick="clique()">
-
-    <p id="resposta">
-        O resultado vai aparecer aqui...
-    </p>
+    <div>
+        <input type="button" value="Clique aqui" onclick="clique()">
+        <p id="resposta">
+            O resultado vai aparecer aqui...
+        </p>
+    </div>
 
     <script>
         function clique(){
