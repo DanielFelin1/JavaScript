@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de boas-vindas</title>
+</head>
+<body>
+    <h1>Tela de boas boas-vindas.</h1>
+    <input type="button" value="Vamos começar" onclick="info()">
+    
+    <p id="res"></p>
+
+    <script>
+        function info(){
+            var nome = window.prompt('Qual o seu nome?')
+            // ^ Aqui o nome digitado ficará guardado na variavel nome 
+            var idade = window.prompt('Qual a sua idade?')
+            // ^ Aqui a idade digitada ficará guardada na variavel idade
+            var r = document.getElementById('res')
+            // ^ O elemento dentro da id 'res' vai receber a resposta na variavel 'r'
+            r.innerHTML = `Olá ${nome}, voce tem ${idade} anos. seja bem vindo!`
+            // ^ a variavel 'r' que será a resposta dentro da 'id' vai mostrar as informações de nome e idade.
+        }
+    </script>
+</body>
+</html>
