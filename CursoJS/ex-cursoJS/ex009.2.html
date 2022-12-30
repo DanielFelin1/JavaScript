@@ -20,6 +20,7 @@
             var r = document.getElementById('inacionalidade')
             var resposta = document.getElementById('res')
             if(r.value == 'Brasil' || r.value == 'brasil'){
+                // ^Para o codigfo funcionar precisa indicar que o objeto enviado tem um valor (value), usamos o comparador lógico || para que seja aceito tanto o valor em minusculas quanto em maiusculas.
                 resposta.innerHTML = 'voce é brasileiro'
             } else {
                 resposta.innerHTML = 'voce é estrangeiro'
